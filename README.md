@@ -13,7 +13,7 @@ Les règles retenues pour le jeu de la bataille sont les suivantes (tirées de [
 
 ## Changements par rapport aux consignes
 ### Classe PaquetDeCarte
-Afin de faciliter la lecture l'implémentation et la lecture du code, j'ai ajouté une classe `PaquetDeCarte`.
+Afin de faciliter l'implémentation et la lecture du code, j'ai ajouté une classe `PaquetDeCarte`.
 Cela permet de moins utiliser d'`ArrayList<Carte>` et de factoriser certaines opérations redondantes.
 
 ### Points
@@ -30,5 +30,5 @@ Nombre de cartes: Didier 14, Gérard 38
 Il est possible d'activer/désactiver l'affichage des manches via l'attribut `private static final boolean AFFICHER_MANCHES` de la classe `Bataille`.
 
 ## Fidélité du jeu
-D'après [wikipédia](https://fr.wikipedia.org/wiki/Bataille_%28jeu%29#R%C3%A8gle_actuelle), la moyenne de durée de d'une partie de bataille est de 480 plis.
+D'après [wikipédia](https://fr.wikipedia.org/wiki/Bataille_%28jeu%29#R%C3%A8gle_actuelle), la durée moyenne d'une partie de bataille est de 480 plis.
 Sur 1 000 000 de parties jouées sur mon implémentation, la moyenne est de 447 plis.
