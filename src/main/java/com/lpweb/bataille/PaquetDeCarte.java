@@ -56,6 +56,10 @@ public class PaquetDeCarte
         }
     }
 
+    public void fussionnerParDessous(PaquetDeCarte paquet) {
+        this.ajouterEnDessous(paquet.getCartes());
+    }
+
     public Carte enleverCarte(Carte carte) {
         int indexCarte = this.cartes.indexOf(carte);
         return this.cartes.remove(indexCarte);

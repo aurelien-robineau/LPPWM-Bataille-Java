@@ -2,7 +2,7 @@ package com.lpweb.bataille;
 
 public class Bataille 
 {
-    private static final boolean AFFICHER_MANCHES = false;
+    private static final boolean AFFICHER_MANCHES = true;
 
     public static void main( String[] args )
     {
@@ -48,7 +48,7 @@ public class Bataille
             if (gagnant != null) {
                 print("Gagnant: " + gagnant + " (" + joueur1 + ": " + carteJoueur1 + ", " + joueur2 + ": " + carteJoueur2 + ")");
                 cartesSurTable.melanger();
-                gagnant.getPaquet().ajouterEnDessous(cartesSurTable.getCartes());
+                gagnant.getPaquet().fussionnerParDessous(cartesSurTable);
                 print("Nombre de cartes: " + joueur1 + " " + joueur1.getPaquet().size() + ", " + joueur2 + " " + joueur2.getPaquet().size());
             }
             // Sinon c'est qu'il y a bataille
@@ -58,7 +58,7 @@ public class Bataille
                 // Si un des deux joueurs n'a plus assez de carte pour la bataille (minimum 2), il perd la manche
                 if (joueur1.getPaquet().size() < 2 || joueur2.getPaquet().size() < 2) {
                     gagnant = joueur1.getPaquet().size() >= 2 ? joueur1 : joueur2;
-                    gagnant.getPaquet().ajouterEnDessous(cartesSurTable.getCartes());
+                    gagnant.getPaquet().fussionnerParDessous(cartesSurTable);
                 }
                 // Sinon chaque joueur ajoute une nouvelle carte sur la table
                 else {
