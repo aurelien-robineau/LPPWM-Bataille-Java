@@ -47,6 +47,7 @@ public class Bataille
             // S'il y a un gagnant, il récupère toutes les cartes jouées pendant la manche
             if (gagnant != null) {
                 print("Gagnant: " + gagnant + " (" + joueur1 + ": " + carteJoueur1 + ", " + joueur2 + ": " + carteJoueur2 + ")");
+                // On mélange afin d'éviter la création de patterns qui peuvent conduire à une partie infinie
                 cartesSurTable.melanger();
                 gagnant.getPaquet().fussionnerParDessous(cartesSurTable);
                 print("Nombre de cartes: " + joueur1 + " " + joueur1.getPaquet().size() + ", " + joueur2 + " " + joueur2.getPaquet().size());
